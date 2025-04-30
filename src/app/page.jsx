@@ -1,24 +1,13 @@
 "use client";
+import { Mainbody } from "../components/Mainbody";
+import React from "react";
 
-import {
-  SearchCity,
-  MainDesign,
-  WeatherOfDay,
-  WeatherOfNight,
-} from "@/components";
-import { useWeather } from "@/hook/useWeather";
-
-const page = () => {
-  const { setSelectedCity, weather, loading } = useWeather();
-
+const Home = () => {
   return (
     <div className="relative">
-      <MainDesign />
-      <SearchCity setSelectedCity={setSelectedCity} />
-      <WeatherOfDay weather={weather} loading={loading} />
-      <WeatherOfNight weather={weather} loading={loading} />
+      <Mainbody />
     </div>
   );
 };
 
-export default page;
+export default Home;
